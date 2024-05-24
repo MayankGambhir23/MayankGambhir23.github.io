@@ -9,18 +9,18 @@ body{
     font-weight: bold; margin-top: -70px;
 }
 .header{ text-align: center;vertical-align: middle;margin:1% 0px;padding: 0px;line-height: 30px;
- 
 }
 .head-logo{
   width: 50px;
   height: auto; 
 }
 /*NAVBAR CSS*/
+.cross{font-weight: 900; font-size: 23px; position: absolute;right: 7px;display: none;}
   .navbar {
     background-color: rgb(250, 226, 102);
     overflow: hidden;
     margin:  1px;
-    padding: 5px 8px;
+    padding: 3px 3px;
     margin-bottom: 3%;
     margin-top: 0px;
     /*position: -webkit-sticky; /* Safari */
@@ -32,7 +32,7 @@ body{
     display: block;
    font-size: 19px;
     text-align: center;
-    padding: 14px 20px;
+    padding: 5px 20px;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
@@ -128,16 +128,20 @@ margin: 1% 0px;
   text-decoration: none;
   color: white;
   }
+  .menu{width: 43px ; height: auto; border: 2px solid black; padding: 2px; 
+    border-radius: 10%;margin-left: -40px; margin-right: 29px; display: none;}
 
 
 @media only screen and (max-device-width:1367px) and (min-device-width:922px)  {
   .news-card{width: 97%;}
+
 }
 @media only screen and (max-device-width:921px) and (min-device-width:767px){
   .news-card{width:73%;}
   .left, .right{display: block;}
   .card-image{width: 97%; height: auto; margin: auto;}
   .right{width: 97%;}
+  .navbar p{padding: 3px 19px;}
 }
 
 @media only screen and (max-device-width:766px) and (min-device-width:100px){
@@ -145,4 +149,8 @@ margin: 1% 0px;
   .left, .right{display: block;}
   .card-image{width: 97%; height: auto; margin: auto;}
   .right{width: 97%;}
+  .navbar{display: none; }
+  .menu{display: inline-block;}
+  .cross{display: block;}
+  .navbar p{padding: 3px 37px; }
 }
