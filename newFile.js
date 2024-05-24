@@ -55,9 +55,9 @@ let options = {
   let result = await response.json();
 let news = result.items;
 console.log(news)
-
+document.getElementById("clicked").innerText = n;
 if(news == undefined){document.getElementById("undefined").innerText = "It Seems that it has too many clicked just contact us on below channels and only saying 'Too many Requests'"}
-else{ document.getElementById("clicked").innerText = n;
+else{ 
     let i = 0;
 while(i < news.length){
 let newscard = document.createElement("div");
