@@ -1,23 +1,13 @@
-if(screen.width < 501  && screen.width > 400){
-    let titles = document.getElementsByClassName("title")
-    let snippets = document.getElementsByClassName("snippet")
 
-    for (let i = 0; i <= titles.length; i++) {
-        titles[i].size = "33";
-        snippets[i].cols = "53"
-        }
-    
+let menu = document.querySelector('#menu')
+let cros = document.querySelector('#cross')
+menu.onclick = function(){document.getElementById("menu").style.display = "none"
+document.getElementById("navbar").style.display = "block"
 }
-if(screen.width < 400){
-    let titles = document.getElementsByClassName("title")
-    let snippets = document.getElementsByClassName("snippet")
 
-    for (let i = 0; i <= titles.length; i++) {
-        titles[i].size = "27";
-        snippets[i].cols = "46 "
-        }
-    
-}
+cros.onclick = function(){document.getElementById("menu").style.display = "inline-block"
+document.getElementById("navbar").style.display = "none"}
+
 let n = "latest";
 change(n);
 let n1 =   document.querySelector("#nav1") 
@@ -48,10 +38,6 @@ while(i <newscards.length){
     newscards[i].remove();   
 }
 }
-//window.location.reload();
-//let n = latest
-//history.go(0);
-//window.onload
 console.log(n)
 let url = `https://google-news13.p.rapidapi.com/${n}?lr=en-US`;
 console.log(url)
@@ -62,17 +48,17 @@ let options = {
 		'X-RapidAPI-Host': 'google-news13.p.rapidapi.com'
 	}
 };
-//try{
+/*'X-RapidAPI-Key': 'df2928132dmsh5dbfbff115e434cp147e55jsn0132909368cd',
+		'X-RapidAPI-Host': 'google-news13.p.rapidapi.com'
+ */
   let response = await fetch(url, options);
   let result = await response.json();
 let news = result.items;
 console.log(news)
-//console.log(news[0].length)
-//console.log(news[0].images.thumbnailProxied.toString())
-document.getElementById("clicked").innerText = n;
 
 if(news == undefined){document.getElementById("undefined").innerText = "It Seems that it has too many clicked just contact us on below channels and only saying 'Too many Requests'"}
 else{
+    document.getElementById("clicked").innerText = n;
     let i = 0;
 while(i < news.length){
 let newscard = document.createElement("div");
@@ -115,24 +101,17 @@ document.getElementById("menu").appendChild(newscard);
 
 let titles = document.getElementsByClassName("title")
 let snippets = document.getElementsByClassName("snippet")
-//let publishs = document.getElementsByClassName("publish")
 let publishers = document.getElementsByClassName("publisher")
 let imagess = document.getElementsByClassName("card-image")
 let times = document.getElementsByClassName("time")
 let urls = document.getElementsByClassName("link-url")
 
-
 for(let i = 0; i <= news.length; i++){
-
      titles[i].innerText += news[i].title
-
      snippets[i].innerText += news[i].snippet
-     //publishs[i].value += news[i].publisher
 
-    
 if(news[i].images == undefined){imagess[i].src += "https://t3.ftcdn.net/jpg/01/26/39/54/360_F_126395469_FnlY3ZgaAZaosjmSbkgA3I5sS3UXN78T.jpg"}
 else{imagess[i].src += news[i].images.thumbnailProxied.toString()}
-//console.log(news[i].images.thumbnailProxied.toString())
    times[i].innerText += new Date(Number(news[i].timestamp))
    publishers[i].innerText  += "Read more at " + news[i].publisher
 
@@ -149,6 +128,26 @@ else{imagess[i].src += news[i].images.thumbnailProxied.toString()}
 // I think i am doing mistake in the html where i need to first empty the html end then start over this
 // for this i need to delete html tags through js
 
+}
+if(screen.width < 501  && screen.width > 400){
+    let titles = document.getElementsByClassName("title")
+    let snippets = document.getElementsByClassName("snippet")
+
+    for (let i = 0; i <= titles.length; i++) {
+        titles[i].size = "33";
+        snippets[i].cols = "53"
+        }
+    
+}
+if(screen.width < 400){
+    let titles = document.getElementsByClassName("title")
+    let snippets = document.getElementsByClassName("snippet")
+
+    for (let i = 0; i <= titles.length; i++) {
+        titles[i].size = "27";
+        snippets[i].cols = "46 "
+        }
+    
 }
 
  
