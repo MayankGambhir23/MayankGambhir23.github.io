@@ -58,7 +58,6 @@ console.log(news)
 
 if(news == undefined){document.getElementById("undefined").innerText = "It Seems that it has too many clicked just contact us on below channels and only saying 'Too many Requests'"}
 else{
-    document.getElementById("clicked").innerText = n;
     let i = 0;
 while(i < news.length){
 let newscard = document.createElement("div");
@@ -147,6 +146,7 @@ if(screen.width < 400){
         titles[i].size = "27";
         snippets[i].cols = "46 "
         }
+	 document.getElementById("clicked").innerText = n;
     
 }
 
