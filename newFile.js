@@ -1,11 +1,11 @@
 
-let menu = document.querySelector('#menu')
+let menuf = document.querySelector('#menuf')
 let cros = document.querySelector('#cross')
-menu.onclick = function(){document.getElementById("menu").style.display = "none"
+menuf.onclick = function(){document.getElementById("menuf").style.display = "none"
 document.getElementById("navbar").style.display = "block"
 }
 
-cros.onclick = function(){document.getElementById("menu").style.display = "inline-block"
+cros.onclick = function(){document.getElementById("menuf").style.display = "inline-block"
 document.getElementById("navbar").style.display = "none"}
 
 let n = "latest";
