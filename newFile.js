@@ -44,7 +44,7 @@ console.log(url)
 let options = {
 	method: 'GET',
 	headers: {
-			'X-RapidAPI-Key': '14cc1cd96amsh32510cd9ee1b11bp1ac9bejsnba26cd278fb1',
+			'X-RapidAPI-Key': 'df2928132dmsh5dbfbff115e434cp147e55jsn0132909368cd',
 		'X-RapidAPI-Host': 'google-news13.p.rapidapi.com'
 	}
 };
