@@ -42,9 +42,7 @@ body{
     color: black;
   }
 .clicked-item{text-align: center;}
-#undefined{font-size: 19px;}
- /* #menu{
-  color: white ;}*/
+#undefined{font-size: 23px;}
 .news-card{
     align-items: center;
     width: 60%;
@@ -153,6 +151,6 @@ margin: 1% 0px;
   .menu{display: inline-block;}
   .cross{display: block;}
   .navbar p{padding: 3px 37px; }
- .header{margin-top: 5%}
- .clicked-item{margin-top: 53px; }
+  .header{margin-top: 5%}
+  .clicked-item{margin-top: 53px; }
 }
