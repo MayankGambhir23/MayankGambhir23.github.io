@@ -41,8 +41,8 @@ body{
     background-color: #ddd;
     color: black;
   }
-.clicked-item{text-align: center;}
-#undefined{font-size: 23px;}
+.clicked-item{text-align: center;font-size: 23px;}
+
 .news-card{
     align-items: center;
     width: 60%;
