@@ -42,6 +42,7 @@ body{
     color: black;
   }
 .clicked-item{text-align: center;font-size: 23px;}
+#clicked{font-weight: bold;}
 
 .news-card{
     align-items: center;
